@@ -1,0 +1,12 @@
+[options]
+mode bmc
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal seq_detector_tb.sv
+prep -top seq_detector_tb
+
+[files]
+seq_detector_tb.sv

@@ -1,0 +1,12 @@
+[options]
+mode cover
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal puzzle853.sv
+prep -top puzzle853
+
+[files]
+puzzle853.sv

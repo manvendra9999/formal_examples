@@ -1,0 +1,12 @@
+[options]
+mode bmc
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal seq_detector_case.sv
+prep -top seq_detector_case
+
+[files]
+seq_detector_case.sv

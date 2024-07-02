@@ -1,0 +1,12 @@
+[options]
+mode cover
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal seq_detector_mem.sv
+prep -top seq_detector_mem
+
+[files]
+seq_detector_mem.sv

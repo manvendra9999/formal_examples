@@ -1,0 +1,12 @@
+# Ignore all files
+*
+
+# Except for directories
+!*/
+
+# Except for specific file types within those directories
+!*.sv
+!*.sby
+!.gitignore
+!.git
+!README*

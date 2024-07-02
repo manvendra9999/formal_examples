@@ -1,0 +1,12 @@
+[options]
+mode cover
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal arbiter.sv
+prep -top arbiter
+
+[files]
+arbiter.sv

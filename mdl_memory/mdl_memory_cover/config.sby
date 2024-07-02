@@ -1,0 +1,12 @@
+[options]
+mode cover
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal mdl_memory.sv
+prep -top mdl_memory
+
+[files]
+mdl_memory.sv

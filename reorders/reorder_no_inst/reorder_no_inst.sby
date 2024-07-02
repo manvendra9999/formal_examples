@@ -1,0 +1,30 @@
+[tasks]
+basic bmc
+nofullskip prove
+cover
+noverific cover
+basic cover : default
+
+[options]
+cover:
+mode cover
+--
+prove:
+mode prove
+--
+bmc: 
+mode bmc
+--
+
+[engines]
+smtbmc boolector
+
+[script]
+nofullskip: read -define NO_FULL_SKIP=1
+read -formal reorder_no_inst.sv
+read -formal /home/ms2314/Documents/formal_train/mdl_memory/mdl_memory.sv
+prep -top reorder_no_inst
+
+[files]
+reorder_no_inst.sv
+/home/ms2314/Documents/formal_train/mdl_memory/mdl_memory.sv

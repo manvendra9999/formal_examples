@@ -1,0 +1,32 @@
+[tasks]
+basic bmc
+nofullskip prove
+cover
+noverific cover
+basic cover : default
+
+[options]
+cover:
+mode cover
+--
+prove:
+mode prove
+--
+bmc: 
+mode bmc
+--
+
+[engines]
+smtbmc boolector
+
+[script]
+nofullskip: read -define NO_FULL_SKIP=1
+read -formal compare.sv
+read -formal /home/ms2314/Documents/formal_train/seq_detectors/seq_detector_mem/seq_detector_mem.sv
+read -formal /home/ms2314/Documents/formal_train/seq_detectors/seq_detector_case/seq_detector_case.sv
+prep -top compare
+
+[files]
+compare.sv
+../seq_detector_mem/seq_detector_mem.sv
+../seq_detector_case/seq_detector_case.sv

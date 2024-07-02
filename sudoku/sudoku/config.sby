@@ -1,0 +1,13 @@
+[options]
+mode cover
+
+[engines]
+smtbmc
+
+
+[script]
+read -formal sudoku.sv
+prep -top sudoku
+
+[files]
+sudoku.sv

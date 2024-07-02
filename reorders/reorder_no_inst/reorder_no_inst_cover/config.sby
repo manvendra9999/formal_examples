@@ -1,0 +1,14 @@
+[options]
+mode cover
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal reorder_no_inst.sv
+read -formal /home/ms2314/Documents/formal_train/mdl_memory/mdl_memory.sv
+prep -top reorder_no_inst
+
+[files]
+reorder_no_inst.sv
+/home/ms2314/Documents/formal_train/mdl_memory/mdl_memory.sv
